@@ -1,0 +1,6 @@
+// Font Face
+@mixin font-face($font-name) {
+  $font-path: "../../assets/fonts/Open_Sans/" + $font-name + ".ttf";
+  font-family: $font-name;
+  src: url($font-path);
+}

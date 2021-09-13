@@ -1,0 +1,33 @@
+<app-banner [pageName]="pageName"></app-banner>
+<div class="container page-container">
+  <div class="row">
+    <div class="col-12">
+      <app-filter (availableTickets)="filterEvents('available',undefined,undefined, $event)"
+                  (categorySelected)="filterEvents('category',undefined,$event,undefined)"
+                  (dateSelected)="filterEvents('date',$event,undefined,undefined)"
+      ></app-filter>
+      <div class="col-12">
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <h4 class="font-color-dark-green font-style-bold">{{pageTitle}}</h4>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 col-md-4" *ngFor="let event of eventsArray.value">
+
+          <app-event-card [title]="event['title']"
+                          [description]="event['description']"
+                          [imageUrl]="event['image']"
+                          [soldOut]="event['isSoldOut']"
+                          [location]="event['location']"
+                          [date]="event['start']"
+                          [categoryId]="event['categoryTypeCode']"
+
+          ></app-event-card>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

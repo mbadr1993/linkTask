@@ -1,0 +1,7 @@
+// Define Fonts [Font Face]
+@each $font in map-keys($font-styles) {
+  @font-face {
+    @include font-face(map-get($font-styles, #{$font}));
+  }
+}
+

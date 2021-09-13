@@ -1,0 +1,9 @@
+// Define all icon size classes
+.icon-size {
+  @each $size in map-keys($icon-sizes) {
+    &-#{$size} {
+      width: map-get($icon-sizes, #{$size});
+      height: map-get($icon-sizes, #{$size});
+    }
+  }
+}

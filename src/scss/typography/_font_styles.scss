@@ -1,0 +1,8 @@
+// Define font style classes
+.font-style {
+  @each $font-style in map-keys($font-styles) {
+    &-#{$font-style} {
+      font-family: map-get($font-styles, #{$font-style});
+    }
+  }
+}

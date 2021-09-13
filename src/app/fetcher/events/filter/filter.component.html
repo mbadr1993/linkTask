@@ -1,0 +1,18 @@
+<div class="filter">
+  <span>{{'filter_by' | translate}}</span>
+  <div class="control-container">
+    <input type="date" placeholder="Date" #dateInput (change)="filterDate()">
+  </div>
+
+  <div class="control-container">
+    <select name="cars" id="cars" #categorySelect (change)="filterCategory()">
+      <option value="">{{'allCat' | translate}}</option>
+      <option *ngFor="let category of categories.value" value="{{category['categoryId']}}">{{category['categoryName']}}</option>
+    </select>
+  </div>
+  <div class="control-container switch">
+    <input type="checkbox" id="vehicle1">
+    <span class="slider round" for="vehicle1"></span>
+    <label for="vehicle1" (click)="filterAvailable()"> {{'available_tickets_only' | translate}}</label>
+  </div>
+</div>

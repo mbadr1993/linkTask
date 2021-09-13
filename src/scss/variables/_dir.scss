@@ -1,0 +1,7 @@
+// Directions var selector for shared SCSS [Global Files]
+$ltr-global: '[ dir = "ltr" ]';
+$rtl-global: '[ dir = "rtl" ]';
+
+// Directions var selector for Angular SCSS [Angular Files]
+$ltr: '[ dir = "ltr" ] :host-context';
+$rtl: '[ dir = "rtl" ] :host-context';

@@ -1,0 +1,97 @@
+@import "../imports_needed";
+
+// Event card styles
+.event {
+  &-card {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: $grid-gutter-width;
+
+    p{
+      color: $color-monochrome-gray94;
+      max-height: 90px;
+      overflow: hidden;
+    }
+  }
+
+  &-head{
+    display: flex;
+    align-items: center;
+  }
+
+  &-date{
+    display: flex;
+    flex-direction: column;
+    color: $color-main-dark-green;
+    margin-bottom: $grid-gutter-width/2;
+    text-align: center;
+
+    #{$ltr} &{
+      margin-right: $grid-gutter-width/3;
+    }
+
+    #{$rtl} &{
+      margin-left: $grid-gutter-width/3;
+    }
+
+    .number{
+      min-width: 75px;
+      font-size: 4rem;
+      font-family: $font-family-bold;
+    }
+
+    .month-year{
+      font-size: $font-size-sm;
+    }
+  }
+
+  &-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .sold-out{
+      width: 125px;
+      position: absolute;
+      right: -30px;
+      top: 15px;
+      text-align: center;
+      padding: $grid-gutter-width/6;
+      color: $color-monochrome-white;
+      background-color: $color-main-bink;
+      transform: rotate(45deg);
+    }
+  }
+
+  &-location{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: $font-size-sm;
+
+    span{
+      &:first-child{
+        padding: $grid-gutter-width/6 $grid-gutter-width/3;
+        background-color: $color-monochrome-grayE4;
+        border-radius: 10px;
+      }
+
+      &.country {
+        display: flex;
+        align-items: center;
+
+        svg {
+          fill: $color-main-bink;
+        }
+      }
+    }
+  }
+
+}

@@ -1,0 +1,158 @@
+@import "../imports_needed";
+
+// All header styles
+header {
+  width: 100%;
+  display: block;
+  background-color: $color-main-dark-green;
+  padding: $grid-gutter-width/2;
+
+  @include media-breakpoint-up(md){
+    padding: $grid-gutter-width 0;
+  }
+
+  .brand-links {
+    display: flex;
+    align-items: center;
+
+    .brand {
+      #{$ltr} & {
+        padding-right: $grid-gutter-width;
+      }
+
+      #{$rtl} & {
+        padding-left: $grid-gutter-width;
+      }
+
+      img {
+        width: 60px;
+
+        @include media-breakpoint-up(md) {
+          width: 85px;
+        }
+      }
+    }
+
+    ul {
+      display: none;
+
+      @include media-breakpoint-up(md) {
+        display: flex;
+        align-items: center;
+      }
+
+      li {
+        padding: $grid-gutter-width/4;
+
+        &:first-child {
+          #{$ltr} & {
+            padding-left: 0;
+          }
+
+          #{$rtl} & {
+            padding-right: 0;
+          }
+        }
+
+        &:last-child {
+          #{$ltr} & {
+            padding-right: 0;
+          }
+
+          #{$rtl} & {
+            padding-left: 0;
+          }
+        }
+
+        a {
+          display: block;
+          position: relative;
+          color: $color-monochrome-white;
+
+          &:hover, &.active {
+            &:after {
+              content: '';
+              width: 100%;
+              height: 2px;
+              position: absolute;
+              left: 0;
+              bottom: -5px;
+              background-color: $color-monochrome-white;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .lang-account {
+    display: flex;
+    align-items: center;
+
+    .langLink {
+      display: none;
+
+      @include media-breakpoint-up(md) {
+        display: block;
+        color: $color-main-dark-green;
+        background-color: $color-monochrome-white;
+        padding: $grid-gutter-width/3 $grid-gutter-width/2;
+        border-radius: 30px;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      #{$ltr} & {
+        @include media-breakpoint-up(md) {
+          height: 35px;
+          margin-right: $grid-gutter-width/3;
+          line-height: 10px;
+        }
+      }
+
+      #{$rtl} & {
+        @include media-breakpoint-up(md) {
+          margin-left: $grid-gutter-width/3;
+        }
+      }
+    }
+
+    .user {
+      display: flex;
+      align-items: center;
+      color: $color-monochrome-white;
+
+      .text {
+        display: flex;
+        flex-direction: column;
+
+        #{$ltr} & {
+          text-align: right;
+          padding-right: $grid-gutter-width/3;
+        }
+
+        #{$rtl} & {
+          text-align: left;
+          padding-left: $grid-gutter-width/3;
+        }
+      }
+
+      .icon {
+        width: map-get($icon-sizes, 'lg')-10;
+        height: map-get($icon-sizes, 'lg')-10;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        background-color: $color-monochrome-white;
+        border-radius: 50%;
+
+        svg {
+          width: 80%;
+          height: 80%;
+        }
+      }
+    }
+  }
+}

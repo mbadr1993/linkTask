@@ -1,0 +1,8 @@
+// Define all color size classes
+.font-color {
+  @each $color in map-keys($colors-map) {
+    &-#{$color} {
+      color: map-get($colors-map, #{$color});
+    }
+  }
+}

@@ -1,0 +1,20 @@
+@import "../imports_needed";
+@import "./formElements/input";
+@import "./formElements/switch";
+
+// All filter styles
+.filter {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: $grid-gutter-width/2;
+  background-color: $color-monochrome-grayE5;
+
+  .control-container{
+    width: 300px;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 $grid-gutter-width/2;
+  }
+}

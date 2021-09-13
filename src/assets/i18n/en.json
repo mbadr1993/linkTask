@@ -1,0 +1,27 @@
+{
+ "footer": {
+   "links": {
+     "copyrights": "Copyrights",
+     "privacy_Policy": "Privacy Policy",
+     "site_Map":  "Site Map"
+   },
+   "copyrights": "All rights reserved - Link Development Company © 2020"
+ },
+  "header":{
+    "links": {
+      "home": "Home",
+      "about_us":"About Us",
+      "events": "Events",
+      "workspace":"Workspace",
+      "my_accounts": "My Accounts",
+      "popular_resources":"Popular Resources",
+      "contact_us": "Contact Us"
+    },
+    "welcome": "Welcome",
+    "lang": "عربي"
+  },
+  "available_tickets_only": "Available Tickets Only",
+  "filter_by": "Filter By:",
+  "soldOut": "Sold Out",
+  "allCat": "All Categories"
+}
